@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    font-family: 'Space Mono', monospace, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/*Styling for footer*/
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+footer li {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/*Code for sticky footer from CSS Tricks: https://css-tricks.com/couple-takes-sticky-footer/*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-links,
+.landing-header,
+.site-header,
+.game-container {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+/*Styling for landing page*/
+
+.landing-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+}
+
+.landing-header a {
+    text-decoration: none;
+}
+
+.landing-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/*Styling for Biscuit and Wildcard Mode pages*/
+
+.mode-header-text a {
+    text-decoration: none;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 100px;
+    font-size: 1.2em;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-bar li {
+    padding: 20px;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.name-display {
+    display: flex;
+    display: inline;
+    flex-direction: row;
+    align-content: center;
+}
+
+.name-display {
+    font-size: 1.5em;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+button img {
+    width: 100px;
+    height: 100px;
+}
+
+.name-history ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 40px;
+}
+
+.fa-angle-double-down {
+    font-size: 0.75em;
+}
+
+/* Styling for Biscuit Mode page only*/
+
+.roll h3,
+.name-printout h4 {
+    font-size: 1.25em;
+}
+
+.name-history h5 {
+    font-size: 1.2em;
+}
+
+.biscuit-input a {
+    text-decoration: underline;
+}
+
+/* Styling for Wildcard Mode page only*/
+
+.name-printout h3 {
+    font-size: 1.25em;
+}
+
+.name-history h4 {
+    font-size: 1.2em;
+}
+
+/*Media queries*/
+
+/*Queries for screen sizes larger than 1600px*/
+
+@media screen and (min-width: 1600px) {
+
+    .landing-header,
+    .landing-links {
+        font-size: 1.75em;
+    }
+}
+
+/*Queries for screen sizes smaller than 980px*/
+
+@media screen and (max-width: 980px) {
+    .landing-links {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        margin: 0 auto;
+    }
+
+    .site-header {
+        font-size: 1em;
+    }
+}
+
+/*Queries for screen sizes smaller than 800px*/
+
+@media screen and (max-width: 800px) {
+    .nav-bar ul {
+        margin: 0 auto;
+    }
+
+    .nav-bar li {
+        padding-top: 0;
+    }
+
+    .game-container {
+        padding-top: 20px;
+    }
+
+    .biscuit-input h2 {
+        font-size: 1.2em;
+    }
+}
+
+/*Queries for screen sizes smaller than 450px*/
+
+@media screen and (max-width: 450px) {
+    .landing-header {
+        text-align: center;
+        font-size: 1.25em;
+    }
+
+    .site-header {
+        text-align: center;
+    }
+
+    .site-header li {
+        margin-right: 15px;
+    }
+
+    .mode-header-text {
+        font-size: 0.55em;
+    }
+
+    .biscuit-input h2 {
+        font-size: 1.1em;
+    }
+}
